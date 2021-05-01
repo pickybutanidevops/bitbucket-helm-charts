@@ -1,0 +1,31 @@
+apiVersion: v2
+name: bitbucket 
+description: Helm chart for Atlassian Bitbucket.
+type: application
+version: 4.2.1
+appVersion: 7.12.1
+home: https://www.atlassian.com/software/bitbucket
+icon: https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/f6/1f/d8/f61fd8a9-5451-cd1a-8ef0-5b865999bacb/source/256x256bb.jpg
+keywords:
+  - bitbucket
+  - bitbucket-server
+  - atlassian
+  - agile
+  - documentation
+  - wiki
+sources:
+  - https://bitbucket.org/atlassian-docker/docker-atlassian-bitbucket-server
+  - https://hub.docker.com/r/atlassian/bitbucket-server
+  - https://github.com/pickybutanidevops/helm-charts/ 
+maintainers:
+  - name:PickyButani 
+    email: PickyButani@gmail.com
+dependencies:
+  - name: postgresql
+    version: ~10.3.17
+    repository: https://charts.bitnami.com/bitnami/
+    condition: postgresql.enabled
+annotations:
+  artifacthub.io/changes: |
+    - Use absolute reference to JDK 11 image
+
