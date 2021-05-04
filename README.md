@@ -1,5 +1,5 @@
 # helm-charts
 Atlassian
-bitbucket
+bitbucket-server
 bitbucket data center
 bitbucket docker image
