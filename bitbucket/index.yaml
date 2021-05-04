@@ -5,7 +5,7 @@ entries:
       category: Database
     apiVersion: v2
     appVersion: 11.11.0
-    created: "2021-05-03T03:37:21.658069457Z"
+    created: "2021-05-04T04:04:10.942505444Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -31,6 +31,6 @@ entries:
     - https://github.com/bitnami/bitnami-docker-postgresql
     - https://www.postgresql.org/
     urls:
-    - charts/postgresql-10.3.18.tgz
+    - https://pickybutanidevops.github.io/helm-charts/charts/postgresql-10.3.18.tgz
     version: 10.3.18
-generated: "2021-05-03T03:37:21.654537996Z"
+generated: "2021-05-04T04:04:10.93889791Z"
