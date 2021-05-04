@@ -23,7 +23,7 @@ version: 0.1.0
 # It is recommended to use it with quotes.
 appVersion: "6.0.9-jdk11"
 home: https://www.atlassian.com/software/bitbucket
-icon: https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/f6/1f/d8/f61fd8a9-5451-cd1a-8ef0-5b865999bacb/source/256x256bb.jpg
+icon: https://brandslogos.com/wp-content/uploads/images/large/bitbucket-logo.png
 keywords:
   - bitbucket
   - bitbucket-server
