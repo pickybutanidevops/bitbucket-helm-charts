@@ -34,7 +34,7 @@ keywords:
 sources:
   - https://bitbucket.org/atlassian-docker/docker-atlassian-bitbucket-server
   - https://hub.docker.com/r/atlassian/bitbucket
-  - https://a7d33cf04bcac42209a383d094407802-637075229.us-east-2.elb.amazonaws.com/artifactory/oag-helm-virtual/
+  - https://pickybutanidevops.github.io/helm-charts/
 maintainers:
   - name: PickyButani
     email: PickyButani@gmail.com
