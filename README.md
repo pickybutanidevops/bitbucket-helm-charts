@@ -1,9 +1,8 @@
-<html>
 <meta name="google-site-verification" content="njRQbFZ3zGpqwqbXCXkbZXPxNa0J8pxmPZ3LvFJr-wo" />
-  <body>
-
+<html>
+ <body>
 <br>Bitbucket Helm Chart for Kubernetes</br>
-
+</body>
 <br>bitbucket-data-center</br>
 <br>bitbucket-server</br>
 <br>bitbucket-docker-image</br>
@@ -18,5 +17,5 @@
 <br>helm install bitbucket bitbucket/bitbucket --namespace bitbucket --create-namespace</br>
 <br>helm list -n bitbucket</br>
 <br>Get Bitbucket url: helm status bitbucket -n bitbucket</br>
-</body>
+
 </html>
