@@ -25,7 +25,9 @@ helm repo index --url https://pickybutanidevops.github.io/helm-charts/
 git add . && git commit -m “Initial commit” && git push origin master
 
 This helm chart is set with AWS ELB - LoadBalancer as a Service(for on premise usage just change service type to ClusterIP and patch with externalIP). 
-This Uses AWS - EFS storage, so volume mount for bitbucket data center is mounted with pvc created. For on-premise you can use NFS as a storage class.
-Postgres DB as internal DB. Please also use external database option when required. 
+This Uses AWS - EFS storage, so volume mount for bitbucket data center is mounted with pvc created and check efs is encrypted. 
+For on-premise you can use NFS as a storage class. This chart will install Bitbucket-datacenter container, Postgres DB container and elastic search containers.
+Please also use external database option when required, refer to Postgres DB container service name when configuring bitbucket.
 Note: if you uninstall this helm release chart, pvc created with helm chart installation is not deleted. Retain Policy is set for storage class.
+
 
