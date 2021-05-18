@@ -1,9 +1,10 @@
-# helm-charts
+# Bitbucket Helm Chart for Kubernetes
+
 <br><b>bitbucket-data-center</b></br>
 <br>bitbucket-server</br>
 <br>bitbucket-docker-image</br>
 <br>AWS EKS</br>
-<br>bitbucket, Postgres, ElasticSearch</br>
+<br><b>Bitbucket, Postgres, ElasticSearch</b></br>
 
 #Installation
 <br>helm repo add bitbucket https://pickybutanidevops.github.io/bitbucket-helm-charts/</br>
