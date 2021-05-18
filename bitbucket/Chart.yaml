@@ -21,7 +21,7 @@ version: 0.1.0
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
-appVersion: "6.0.9-jdk11"
+appVersion: "7.6.5"
 home: https://www.atlassian.com/software/bitbucket
 icon: https://brandslogos.com/wp-content/uploads/images/large/bitbucket-logo.png 
 keywords:
@@ -31,18 +31,28 @@ keywords:
   - agile
   - documentation
   - wiki
+  - elasticsearch
+  - postgresql
 sources:
   - https://bitbucket.org/atlassian-docker/docker-atlassian-bitbucket-server
   - https://hub.docker.com/r/atlassian/bitbucket
   - https://pickybutanidevops.github.io/helm-charts/
+  - https://github.com/bitnami/bitnami-docker-elasticsearch
+  - https://www.elastic.co/products/elasticsearch
+  - https://github.com/bitnami/bitnami-docker-postgresql
+  - https://www.postgresql.org/
 maintainers:
   - name: PickyButani
     email: PickyButani@gmail.com
 dependencies:
   - name: postgresql
-    version: ~10.3.17
+    version: 10.4.3
     repository: https://charts.bitnami.com/bitnami/
     condition: postgresql.enabled
+  - name: elasticsearch
+    version: 15.1.6
+    repository: https://charts.bitnami.com/bitnami/
+    condition: elasticsearch.enabled
 annotations:
   artifacthub.io/changes: |
     - Use absolute reference to JDK 11 image

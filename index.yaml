@@ -5,15 +5,19 @@ entries:
       artifacthub.io/changes: |
         - Use absolute reference to JDK 11 image
     apiVersion: v2
-    appVersion: 6.0.9-jdk11
-    created: "2021-05-04T04:48:24.130686542Z"
+    appVersion: 7.6.5
+    created: "2021-05-18T01:13:10.668548667Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
       repository: https://charts.bitnami.com/bitnami/
-      version: ~10.3.17
+      version: 10.4.3
+    - condition: elasticsearch.enabled
+      name: elasticsearch
+      repository: https://charts.bitnami.com/bitnami/
+      version: 15.1.6
     description: A Helm chart for Kubernetes
-    digest: d60c10a82076d2b96d0c24574f1da6ce7d9946d762362bfc7e9b2939ee119d56
+    digest: 746c140049d7abdff1b3e47f8529df149801c44ce50310f2aff513d0ca0959c7
     home: https://www.atlassian.com/software/bitbucket
     icon: https://brandslogos.com/wp-content/uploads/images/large/bitbucket-logo.png
     keywords:
@@ -23,6 +27,8 @@ entries:
     - agile
     - documentation
     - wiki
+    - elasticsearch
+    - postgresql
     maintainers:
     - email: PickyButani@gmail.com
       name: PickyButani
@@ -31,8 +37,12 @@ entries:
     - https://bitbucket.org/atlassian-docker/docker-atlassian-bitbucket-server
     - https://hub.docker.com/r/atlassian/bitbucket
     - https://pickybutanidevops.github.io/helm-charts/
+    - https://github.com/bitnami/bitnami-docker-elasticsearch
+    - https://www.elastic.co/products/elasticsearch
+    - https://github.com/bitnami/bitnami-docker-postgresql
+    - https://www.postgresql.org/
     type: application
     urls:
     - https://pickybutanidevops.github.io/helm-charts/bitbucket-0.1.0.tgz
     version: 0.1.0
-generated: "2021-05-04T04:48:24.126469251Z"
+generated: "2021-05-18T01:13:10.648469989Z"

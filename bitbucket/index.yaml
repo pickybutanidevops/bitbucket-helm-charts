@@ -1,17 +1,49 @@
 apiVersion: v1
 entries:
+  elasticsearch:
+  - annotations:
+      category: Analytics
+    apiVersion: v2
+    appVersion: 7.12.1
+    created: "2021-05-09T03:52:56.183679492Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    - condition: global.kibanaEnabled
+      name: kibana
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.x.x
+    description: A highly scalable open-source full-text search and analytics engine
+    digest: 56ef5c674e1c8ffcde2185959849ebedeb5ceed3c0ba309b72cdd54a8698b042
+    home: https://github.com/bitnami/charts/tree/master/bitnami/elasticsearch
+    icon: https://bitnami.com/assets/stacks/elasticsearch/img/elasticsearch-stack-220x234.png
+    keywords:
+    - elasticsearch
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: elasticsearch
+    sources:
+    - https://github.com/bitnami/bitnami-docker-elasticsearch
+    - https://www.elastic.co/products/elasticsearch
+    urls:
+    - charts/elasticsearch-15.1.6.tgz
+    version: 15.1.6
   postgresql:
   - annotations:
       category: Database
     apiVersion: v2
     appVersion: 11.11.0
-    created: "2021-05-04T04:04:10.942505444Z"
+    created: "2021-05-09T03:52:56.187839872Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
       version: 1.x.x
     description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
-    digest: 06ae558060a97c578d316642b642465c0fcf4bef88185aaf28c9d3afcccf1156
+    digest: f0721a253e6762fabf445c06f589eaa40c9657c104b30a1b4971155cb5d2a951
     home: https://github.com/bitnami/charts/tree/master/bitnami/postgresql
     icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
     keywords:
@@ -31,6 +63,6 @@ entries:
     - https://github.com/bitnami/bitnami-docker-postgresql
     - https://www.postgresql.org/
     urls:
-    - https://pickybutanidevops.github.io/helm-charts/charts/postgresql-10.3.18.tgz
-    version: 10.3.18
-generated: "2021-05-04T04:04:10.93889791Z"
+    - charts/postgresql-10.4.3.tgz
+    version: 10.4.3
+generated: "2021-05-09T03:52:56.178146274Z"

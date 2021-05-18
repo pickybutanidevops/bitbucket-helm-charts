@@ -5,7 +5,7 @@
 image:
   repository: atlassian/bitbucket
   # Overrides the image tag whose default is {{ .Chart.AppVersion }}
-  tag: "6.0.9-jdk11"
+  tag: "7.6.5-jdk11"
   pullPolicy: IfNotPresent
   pullSecrets: []
 
@@ -24,15 +24,15 @@ serviceAccount:
 podAnnotations: {}
 
 podSecurityContext:
-  fsGroup: 2002
+  fsGroup: 2003
 
-securityContext: {}
-  # capabilities:
-  #   drop:
-  #   - ALL
-  # readOnlyRootFilesystem: true
-  # runAsNonRoot: true
-  # runAsUser: 1000
+securityContext:
+  capabilities:
+     drop:
+     - ALL
+  readOnlyRootFilesystem: true
+  runAsNonRoot: true
+  runAsUser: 1000
 
 priorityClassName: ""
 
@@ -76,7 +76,7 @@ persistence:
   enabled: true 
   annotations: 
   # existingClaim: existing-pvc
-  accessMode: ReadWriteOnce
+  accessMode: ReadWriteMany
   storageClass: efs-sc 
   size: 50Gi
 
@@ -129,4 +129,26 @@ psql:
 ##
 postgresql:
   enabled: true
+  environment:
+    - 'POSTGRES_DB=bitbucket'
+    - 'POSTGRES_USER=bitbucket'
+    - 'POSTGRES_PASSWORD=bitbucket'
+  persistence:
+    enabled: true
+    annotations:
+    # existingClaim: existing-pvc
+    accessMode: ReadWriteMany
+    storageClass: efs-sc
+    size: 50Gi
+elasticsearch:
+  enabled: true
+  environment:
+    - discovery.type=single-node
+  persistence:
+    enabled: true
+    annotations:
+    # existingClaim: existing-pvc
+    accessMode: ReadWriteMany
+    storageClass: efs-sc
+    size: 50Gi
  
